@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events — MET Club</title>
-  <meta name="description" content="Discover upcoming events, workshops, and hackathons at MET Club.">
+  <title>Team — MET Club</title>
+  <meta name="description" content="Learn about our story and the incredible team behind MET Club.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://images.unsplash.com; media-src 'self' https://assets.mixkit.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-src 'self' https://player.vimeo.com;">
   <meta name="theme-color" content="#f5f1eb">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E◈%3C/text%3E%3C/svg%3E">
@@ -44,9 +44,8 @@
     
     <div class="container hero-ocean-content">
       <div class="hero-ocean-center reveal">
-        <h1 class="hero-ocean-title" style="font-size: clamp(3rem, 6vw, 5rem);">Events Calendar</h1>
-        <p class="hero-ocean-subtitle">Learn, build, and connect.</p>
-        <a href="#dynamic-events-page" class="hero-ocean-btn">Explore Events</a>
+        <h1 class="hero-ocean-title" style="font-size: clamp(3rem, 6vw, 5rem);">Our Story</h1>
+        <p class="hero-ocean-subtitle">The minds behind the innovation.</p>
       </div>
     </div>
     
@@ -58,37 +57,45 @@
     </div>
   </section>
 
-  <!-- EVENTS DETAILED LIST -->
-  <section class="about" style="padding-top: 5rem; padding-bottom: 5rem;" id="events-list">
+  <!-- OUR STORY SECTION -->
+  <section class="about" style="padding-top: 5rem; padding-bottom: 5rem;">
     <div class="container">
-      <h2 class="about-title" style="text-align: center; margin-bottom: 4rem;">Upcoming <em>Events</em></h2>
-      
-      <div id="dynamic-events-page" style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem;">
-        <!-- Injected via script.js -->
+      <div class="about-grid">
+        <div class="about-content reveal-left">
+          <p class="section-label">/ WHAT DRIVES US</p>
+          <h2 class="about-title">Extremely Proud.</h2>
+          <p class="about-text">
+            When we started the MET Club, it was just a small group of passionate students who wanted to bridge the gap between abstract mathematics and hands-on engineering. Today, we stand incredibly proud of the community we have built together.
+          </p>
+          <p class="about-text">
+            We are proud of the late nights spent debugging code, the hardware that finally worked after the tenth iteration, and the friendships forged in the fires of our hackathons. Our strength lies in our diversity of thought, combining different disciplines to solve tomorrow's problems, today.
+          </p>
+        </div>
+        <div class="about-visual reveal-right">
+          <div class="about-image-wrap">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team collaborating" class="about-image" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <!-- Wave Transition to next section -->
-    <div class="about-wave" style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 80px;">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.62,19.34,103.74,40.17,157.81,51.81,211.89,63.44,266.37,66.15,321.39,56.44Z" fill="#ffffff"></path>
-      </svg>
     </div>
   </section>
 
-  <!-- CTA SECTION -->
-  <section class="connect" style="background: var(--white); padding: 8rem 0;">
-    <div class="container" style="text-align: center;">
-      <p class="section-label reveal">/ PARTICIPATE</p>
-      <h2 class="events-heading reveal" style="font-size: 3.5rem; margin-top: 1rem; margin-bottom: 2rem;">Don't just attend. Participate.</h2>
-      <a href="index.html#contact" class="hero-ocean-btn reveal" style="border-color: var(--black); color: var(--black);">Get involved</a>
+  <!-- DETAILED TEAM ROSTER -->
+  <section class="team" style="padding-top: 5rem; padding-bottom: 8rem; background: var(--white);" id="detailed-team">
+    <div class="container">
+      <p class="section-label reveal" style="text-align: center;">/ OUR PEOPLE</p>
+      <h2 class="events-heading reveal" style="text-align: center; margin-bottom: 4rem;">Meet The Team.</h2>
+      
+      <div class="team-grid" id="dynamic-team">
+        <!-- Injected via script.js -->
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom" style="margin-top: 0; padding-top: 2rem;">
+      <div class="footer-bottom" style="margin-top: 0; padding-top: 2rem; border-top: 1px solid var(--border);">
         <span>© <span id="year"></span> MET Club. All rights reserved.</span>
       </div>
     </div>

@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!form) return;
 
     form.addEventListener('submit', e => {
-      e.preventDefault();
       let valid = true;
 
       form.querySelectorAll('[required]').forEach(f => {
@@ -93,15 +92,18 @@ document.addEventListener('DOMContentLoaded', () => {
         email.style.borderColor = '#c44';
       }
 
-      if (valid) {
+      if (!valid) {
+        // Prevent submission if invalid
+        e.preventDefault();
+      } else {
+        // Allow native HTML submission to proceed to FormSubmit.co
         const btn = document.getElementById(btnId);
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
+        btn.textContent = 'Redirecting...';
         btn.style.opacity = '0.6';
-        setTimeout(() => {
-          form.style.display = 'none';
-          success.classList.add('show');
-        }, 1100);
+        
+        // Dynamically set action if config provides an email
+        const targetEmail = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.contactEmail) ? SITE_CONFIG.contactEmail : "1873reddy1873@gmail.com";
+        form.action = `https://formsubmit.co/${targetEmail}`;
       }
     });
   }
@@ -143,6 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>`;
       });
     }
+
+
 
     // 2. INJECT EVENTS TIMETABLE (index.html)
     // Fills the calendar section row-by-row with upcoming events

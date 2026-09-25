@@ -1,4 +1,7 @@
 const SITE_CONFIG = {
+  // Contact email for the form submissions
+  contactEmail: "1873reddy1873@gmail.com",
+
   // ──────────────────────────────────────────────
   // TEAM MEMBERS (Index Page)
   // ──────────────────────────────────────────────
@@ -7,6 +10,7 @@ const SITE_CONFIG = {
       name: "Ratna Koushik Appasani",
       role: "President",
       image: "assets/images/ratna.jpeg",
+      bio: "Ratna leads the vision and strategy for MET Club. With a passion for interdisciplinary engineering, she focuses on building a community where theoretical math meets practical technology.",
       linkedin: "#",
       github: "#"
     },
@@ -14,6 +18,7 @@ const SITE_CONFIG = {
       name: "Tanya Aggarwal",
       role: "Vice President",
       image: "assets/images/tanya.jpeg",
+      bio: "Tanya oversees the club's operations and ensures that projects align with our core values. She's incredibly proud of the collaborative environment the team has fostered.",
       linkedin: "#",
       github: "#"
     },
@@ -21,6 +26,7 @@ const SITE_CONFIG = {
       name: "Saketh Reddy Kanthala",
       role: "Tech Lead",
       image: "assets/images/saketh.jpeg",
+      bio: "Saketh is the technical backbone of our projects. He specializes in bridging complex algorithms with robust software architecture, constantly pushing the boundaries of what our club can build.",
       linkedin: "#",
       github: "#"
     },
@@ -28,6 +34,7 @@ const SITE_CONFIG = {
       name: "Shubham Verma",
       role: "Events Coordinator",
       image: "assets/images/shubham.jpeg",
+      bio: "Shubham orchestrates our hackathons and workshops. His dedication ensures that every event is an unforgettable learning experience for all members.",
       linkedin: "#",
       github: "#"
     },

@@ -26,14 +26,13 @@
       <a href="#hero" class="nav-brand">MET</a>
       <div class="nav-right">
         <div class="nav-links" id="nav-links">
-          <a href="#about" class="nav-link">ABOUT</a>
+          <a href="team.html" class="nav-link">TEAM</a>
           <a href="#what-we-do" class="nav-link">DISCIPLINES</a>
           <a href="showcase.html" class="nav-link">PROJECTS</a>
-          <a href="#team" class="nav-link">TEAM</a>
           <a href="#events" class="nav-link">EVENTS</a>
           <a href="#contact" class="nav-link">CONTACT</a>
         </div>
-        <a href="#join" class="nav-join">JOIN MET</a>
+        <a href="#contact" class="nav-join">JOIN MET</a>
         <div class="nav-hamburger" id="hamburger">
           <span></span><span></span><span></span>
         </div>
@@ -171,38 +170,12 @@
     <!-- Ocean Wave Transition to next section -->
     <div class="disciplines-wave" style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 80px;">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.62,19.34,103.74,40.17,157.81,51.81,211.89,63.44,266.37,66.15,321.39,56.44Z" fill="#f5f1eb"></path>
-      </svg>
-    </div>
-  </section>
-
-  <!-- 
-    ════════════════════════════════════════════════════════════════
-    TEAM SECTION (DYNAMIC CONTENT)
-    IMPORTANT: The team member cards are NOT hardcoded here!
-    The <div id="dynamic-team"> is intentionally left empty.
-    When the page loads, script.js reads data from config.js and 
-    automatically builds and injects the team cards here.
-    To edit the team, ONLY edit config.js!
-    ════════════════════════════════════════════════════════════════ 
-  -->
-  <section class="team" id="team">
-    <div class="container">
-      <p class="section-label reveal">/ 02 — OUR TEAM</p>
-      <h2 class="section-heading reveal">The people<br>behind <em>MET.</em></h2>
-
-      <div class="team-grid" id="dynamic-team">
-        <!-- Injected via config.js -->
-      </div>
-    </div>
-
-    <!-- Wave Transition to next section -->
-    <div class="team-wave" style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 80px;">
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.62,19.34,103.74,40.17,157.81,51.81,211.89,63.44,266.37,66.15,321.39,56.44Z" fill="#ffffff"></path>
       </svg>
     </div>
   </section>
+
+
 
   <!-- 
     ════════════════════════════════════════════════════════════════
@@ -246,7 +219,7 @@
       </div>
       
       <div class="reveal" style="text-align:center; margin-top: 4rem;">
-        <a href="showcase.html" class="cta-band-btn" style="display:inline-block; border: 1px solid var(--white);">View more and explore</a>
+        <a href="showcase.html" class="cta-band-btn" style="display:inline-block; border: 1px solid var(--black); color: var(--black);">View more and explore</a>
       </div>
     </div>
   </section>
@@ -261,7 +234,7 @@
   <section class="cta-band" id="cta-band">
     <div class="container">
       <p class="cta-band-quote reveal">"The best way to learn<br>is to <em>build.</em>"</p>
-      <a href="#join" class="cta-band-btn reveal">Join the club</a>
+      <a href="#contact" class="cta-band-btn reveal">Join the club</a>
     </div>
 
     <!-- Wave Transition to next section -->
@@ -308,24 +281,31 @@
         </div>
 
         <div class="form-card reveal-right" id="connect-form-container">
-          <form id="connect-form" novalidate>
+          <!-- We use native form submission for FormSubmit so activation/captchas work -->
+          <form id="connect-form" action="https://formsubmit.co/1873reddy1873@gmail.com" method="POST">
+            
+            <!-- FormSubmit Configurations -->
+            <input type="hidden" name="_subject" id="hidden-subject" value="New Contact Form Submission">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://localhost:3000/">
+            
             <div class="form-row">
               <div class="form-group">
                 <label for="connect-firstname" class="form-label">First Name</label>
-                <input type="text" id="connect-firstname" class="form-input" placeholder="Jane" required>
+                <input type="text" name="First Name" id="connect-firstname" class="form-input" placeholder="Jane" required>
               </div>
               <div class="form-group">
                 <label for="connect-lastname" class="form-label">Last Name</label>
-                <input type="text" id="connect-lastname" class="form-input" placeholder="Doe" required>
+                <input type="text" name="Last Name" id="connect-lastname" class="form-input" placeholder="Doe" required>
               </div>
             </div>
             <div class="form-group">
               <label for="connect-email" class="form-label">Email</label>
-              <input type="email" id="connect-email" class="form-input" placeholder="jane@university.edu" required>
+              <input type="email" name="email" id="connect-email" class="form-input" placeholder="jane@university.edu" required>
             </div>
             <div class="form-group">
               <label for="connect-purpose" class="form-label">What are you looking for?</label>
-              <select id="connect-purpose" class="form-select" required>
+              <select id="connect-purpose" name="Category" class="form-select" required onchange="document.getElementById('hidden-subject').value = this.value;">
                 <option value="" disabled selected>Select an option</option>
                 <option>I want to join the club</option>
                 <option>I have a general question</option>
@@ -337,7 +317,7 @@
             </div>
             <div class="form-group">
               <label for="connect-message" class="form-label">Message / Details</label>
-              <textarea id="connect-message" class="form-textarea" placeholder="Tell us more..."></textarea>
+              <textarea id="connect-message" name="Message" class="form-textarea" placeholder="Tell us more..." required></textarea>
             </div>
             <button type="submit" class="form-submit" id="connect-submit-btn">Send Message</button>
           </form>
@@ -385,7 +365,7 @@
           <a href="#what-we-do">What We Do</a>
           <a href="#team">Team</a>
           <a href="#events">Events</a>
-          <a href="#join">Join</a>
+          <a href="#contact">Join</a>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
