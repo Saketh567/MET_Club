@@ -148,12 +148,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fills the calendar section row-by-row with upcoming events
     const eventsContainer = document.getElementById('dynamic-events');
     if (eventsContainer && SITE_CONFIG.events) {
-      SITE_CONFIG.events.forEach(ev => {
+      SITE_CONFIG.events.forEach((ev, index) => {
         eventsContainer.innerHTML += `
         <div class="timetable-row">
           <span class="timetable-date">${ev.date}</span>
           <span class="timetable-title">${ev.title}</span>
           <span class="timetable-meta">${ev.meta}</span>
+          <a href="events.html#event-${index}" class="view-event-btn" style="text-decoration:none; display:inline-block; text-align:center;">View Event</a>
+        </div>`;
+      });
+    }
+
+    // 2.5. INJECT FULL EVENTS LIST (events.html)
+    // Fills the dedicated events page with detailed event information
+    const eventsPageContainer = document.getElementById('dynamic-events-page');
+    if (eventsPageContainer && SITE_CONFIG.events) {
+      SITE_CONFIG.events.forEach((ev, index) => {
+        const delay = index * 0.1;
+        eventsPageContainer.innerHTML += `
+        <div class="event-detail-card reveal" id="event-${index}" style="background: var(--surface); padding: 3rem; margin-bottom: 2rem; border-radius: 8px; border: 1px solid var(--border); transition-delay: ${delay}s; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <p style="color: var(--green); font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 0.5rem;">${ev.date} | ${ev.meta}</p>
+          <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--black); font-family: var(--font-serif); font-weight: normal;">${ev.title}</h2>
+          <p style="color: var(--text-muted); line-height: 1.8;">${ev.details || "No additional details available at this time."}</p>
         </div>`;
       });
     }
@@ -174,6 +190,26 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="team-role">By ${proj.author}</p>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">${proj.description}</p>
             <a href="${proj.link}" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 1rem; color: var(--green); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: bold; text-decoration: none;">View Project &rarr;</a>
+          </div>
+        </div>`;
+      });
+    }
+
+    // 3.5. INJECT PROJECTS PREVIEW (index.html)
+    const projectsPreviewContainer = document.getElementById('dynamic-projects-preview');
+    if (projectsPreviewContainer && SITE_CONFIG.projects) {
+      // Show only up to 3 projects on the home page preview
+      SITE_CONFIG.projects.slice(0, 3).forEach((proj, i) => {
+        const delay = i * 0.1;
+        projectsPreviewContainer.innerHTML += `
+        <div class="team-card reveal" style="transition-delay: ${delay}s;">
+          <div class="team-img-wrap" style="aspect-ratio: 16/9;">
+            <img src="${proj.image}" alt="${proj.title}">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">${proj.title}</h3>
+            <p class="team-role">By ${proj.author}</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">${proj.description}</p>
           </div>
         </div>`;
       });

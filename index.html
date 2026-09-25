@@ -51,8 +51,8 @@
   -->
   <section class="hero-ocean" id="hero">
     <div class="hero-ocean-bg">
-      <video autoplay loop muted playsinline class="hero-video-bg" poster="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
-        <source src="10540776-uhd_2560_1440_30fps.mp4" type="video/mp4">
+      <video autoplay loop muted playsinline class="hero-video-bg">
+        <source src="oceanwave.mp4" type="video/mp4">
       </video>
       <div class="hero-ocean-overlay"></div>
     </div>
@@ -232,6 +232,27 @@
 
   <!-- 
     ════════════════════════════════════════════════════════════════
+    PROJECTS PREVIEW (DYNAMIC CONTENT)
+    Shows a teaser of the showcase projects on the main page.
+    ════════════════════════════════════════════════════════════════ 
+  -->
+  <section class="projects-preview" id="projects-preview" style="background-color: var(--background); padding: 6rem 0;">
+    <div class="container">
+      <p class="section-label reveal" style="text-align:center;">/ 04 — PROJECTS</p>
+      <h2 class="events-heading reveal" style="text-align:center;">Featured Work.</h2>
+
+      <div class="team-grid reveal" id="dynamic-projects-preview" style="margin-top: 4rem;">
+        <!-- Injected via script.js from config.js -->
+      </div>
+      
+      <div class="reveal" style="text-align:center; margin-top: 4rem;">
+        <a href="showcase.html" class="cta-band-btn" style="display:inline-block; border: 1px solid var(--white);">View more and explore</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    ════════════════════════════════════════════════════════════════
     CALL TO ACTION (CTA) BAND
     A simple, high-contrast banner to grab attention and drive 
     users towards the contact/join form below.
@@ -263,7 +284,7 @@
     <div class="container">
       <div class="connect-grid">
         <div class="reveal-left">
-          <p class="section-label">/ 04 — CONNECT</p>
+          <p class="section-label">/ 05 — CONNECT</p>
           <h2 class="connect-heading">Get involved.</h2>
           <p class="connect-text">Whether you want to join the club, showcase a project, or just say hi — this is the place. Drop us a message and we'll get back to you.</p>
           
@@ -346,7 +367,13 @@
     ════════════════════════════════════════════════════════════════ 
   -->
   <footer class="footer">
-    <div class="container">
+    <div class="footer-ocean-bg">
+      <video autoplay loop muted playsinline class="footer-video-bg">
+        <source src="oceanwave.mp4" type="video/mp4">
+      </video>
+      <div class="footer-ocean-overlay"></div>
+    </div>
+    <div class="container footer-content">
       <div class="footer-top">
         <div>
           <p class="footer-brand-name">MET — Maths, Engineering and Technology Club</p>

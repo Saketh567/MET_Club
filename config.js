@@ -68,27 +68,32 @@ const SITE_CONFIG = {
     {
       date: "2026-10-14",
       title: "Robotics Workshop — Build a Line-Following Robot",
-      meta: "6:00–8:00 PM · Engineering Lab"
+      meta: "6:00–8:00 PM · Engineering Lab",
+      details: "Join us for a hands-on workshop where we will build a line-following robot from scratch. No prior experience is required, and all materials will be provided. We'll cover basic electronics, motor control, and simple programming."
     },
     {
       date: "2026-10-22",
       title: "Calculus Study Circle — Fourier Transforms & Applications",
-      meta: "4:30–6:00 PM · Math Commons Rm 112"
+      meta: "4:30–6:00 PM · Math Commons Rm 112",
+      details: "A collaborative study session focusing on Fourier transforms. We'll explore the mathematical theory behind them and discuss real-world applications in signal processing and engineering."
     },
     {
       date: "2026-11-03",
       title: "3D Printing for Engineers — Rapid Prototyping Session",
-      meta: "10:00 AM–12:30 PM · Makerspace Studio"
+      meta: "10:00 AM–12:30 PM · Makerspace Studio",
+      details: "Learn the fundamentals of 3D printing and rapid prototyping. This session will walk you through CAD design basics, slicing software, and best practices for printing functional parts for your engineering projects."
     },
     {
       date: "2026-11-15",
       title: "AI Workshop — Train Your First Neural Network",
-      meta: "2:00–5:00 PM · CS Lab 204"
+      meta: "2:00–5:00 PM · CS Lab 204",
+      details: "Dive into the world of Artificial Intelligence! We will guide you through setting up a Python environment and training your very first neural network using PyTorch to recognize handwritten digits."
     },
     {
       date: "2026-12-01",
       title: "MET Hackathon 2026 — 48-Hour Innovation Sprint",
-      meta: "All day · Engineering Hall"
+      meta: "All day · Engineering Hall",
+      details: "The biggest event of the year! Join us for a 48-hour innovation sprint where teams will compete to build the best tech solutions. Prizes, free food, and industry networking opportunities await!"
     }
   ],
 
