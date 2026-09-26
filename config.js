@@ -10,6 +10,7 @@ const SITE_CONFIG = {
       name: "Ratna Koushik Appasani",
       role: "President",
       image: "assets/images/ratna.jpeg",
+      imagePosition: "15% center",
       bio: "Ratna leads the vision and strategy for MET Club. With a passion for interdisciplinary engineering, she focuses on building a community where theoretical math meets practical technology.",
       memberId: "#TC8492",
       joinYear: "2023",

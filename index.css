@@ -49,6 +49,16 @@
 /* ── Reset ─────────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Accessibility: Keyboard Focus Rings */
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline-color: var(--green);
+}
+
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
@@ -155,6 +165,8 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
   background: #1a3c30;
   transform: translateY(-1px);
 }
+
+.nav-join-mobile { display: none; }
 
 /* Mobile */
 .nav-hamburger {
@@ -830,6 +842,13 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
   margin-bottom: 0.4rem;
 }
 
+/* Visually indicate required fields */
+.form-group:has(input[required], select[required], textarea[required]) .form-label::after {
+  content: " *";
+  color: #d32f2f;
+  margin-left: 2px;
+}
+
 .form-input,
 .form-select,
 .form-textarea {
@@ -841,6 +860,14 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
   color: var(--text);
   font-size: 0.88rem;
   transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+/* Visual error state for invalid inputs (after they start typing) */
+.form-input:not(:placeholder-shown):invalid,
+.form-select:not(:placeholder-shown):invalid,
+.form-textarea:not(:placeholder-shown):invalid {
+  border-color: #d32f2f;
+  background-color: rgba(211, 47, 47, 0.03);
 }
 
 .form-input:focus,

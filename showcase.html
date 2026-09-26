@@ -34,7 +34,7 @@
           <a href="index.html#contact" class="nav-join-mobile">Join MET</a>
         </div>
         <a href="index.html#contact" class="nav-join">JOIN MET</a>
-        <div class="nav-hamburger" id="hamburger">
+        <div class="nav-hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </div>
       </div>
@@ -118,26 +118,26 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="story-name" class="form-label">Your Name</label>
-                <input type="text" id="story-name" name="name" class="form-input" placeholder="Jane Doe" required>
+                <input type="text" id="story-name" name="name" class="form-input" placeholder="Jane Doe" autocomplete="name" aria-required="true" required>
               </div>
               <div class="form-group">
                 <label for="story-email" class="form-label">Email Address</label>
-                <input type="email" id="story-email" name="email" class="form-input" placeholder="jane@example.com" required>
+                <input type="email" id="story-email" name="email" class="form-input" placeholder="jane@example.com" autocomplete="email" aria-required="true" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="story-project" class="form-label">Project Title</label>
-                <input type="text" id="story-project" name="project" class="form-input" placeholder="What did you build?" required>
+                <input type="text" id="story-project" name="project" class="form-input" placeholder="What did you build?" aria-required="true" required>
               </div>
               <div class="form-group">
                 <label for="story-link" class="form-label">Project Link</label>
-                <input type="url" id="story-link" name="link" class="form-input" placeholder="https://github.com/..." required>
+                <input type="url" id="story-link" name="link" class="form-input" placeholder="https://github.com/..." type="url" aria-required="true" required>
               </div>
             </div>
             <div class="form-group">
               <label for="story-text" class="form-label">Your Story</label>
-              <textarea id="story-text" name="story" class="form-textarea" placeholder="Tell us about your journey, challenges, and what you learned along the way..." required></textarea>
+              <textarea id="story-text" name="story" class="form-textarea" placeholder="Tell us about your journey, challenges, and what you learned along the way..." aria-required="true" required></textarea>
             </div>
             <button type="submit" class="form-submit" id="story-submit-btn">Submit Story</button>
           </form>

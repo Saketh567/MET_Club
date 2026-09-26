@@ -39,7 +39,7 @@
           <a href="index.html#contact" class="nav-join-mobile">Join MET</a>
         </div>
         <a href="index.html#contact" class="nav-join">JOIN MET</a>
-        <div class="nav-hamburger" id="hamburger">
+        <div class="nav-hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </div>
       </div>
@@ -324,22 +324,20 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="connect-firstname" class="form-label">First Name</label>
-                <input type="text" name="First Name" id="connect-firstname" class="form-input" placeholder="Jane"
-                  required>
+                <input type="text" name="First Name" id="connect-firstname" class="form-input" placeholder="Jane" autocomplete="given-name" aria-required="true" required>
               </div>
               <div class="form-group">
                 <label for="connect-lastname" class="form-label">Last Name</label>
-                <input type="text" name="Last Name" id="connect-lastname" class="form-input" placeholder="Doe" required>
+                <input type="text" name="Last Name" id="connect-lastname" class="form-input" placeholder="Doe" autocomplete="family-name" aria-required="true" required>
               </div>
             </div>
             <div class="form-group">
               <label for="connect-email" class="form-label">Email</label>
-              <input type="email" name="email" id="connect-email" class="form-input" placeholder="jane@university.edu"
-                required>
+              <input type="email" name="email" id="connect-email" class="form-input" placeholder="jane@university.edu" autocomplete="email" aria-required="true" required>
             </div>
             <div class="form-group">
               <label for="connect-purpose" class="form-label">What are you looking for?</label>
-              <select id="connect-purpose" name="Category" class="form-select" required
+              <select id="connect-purpose" name="Category" class="form-select" aria-required="true" required
                 onchange="document.getElementById('hidden-subject').value = this.value;">
                 <option value="" disabled selected>Select an option</option>
                 <option>I want to join the club</option>
@@ -352,8 +350,7 @@
             </div>
             <div class="form-group">
               <label for="connect-message" class="form-label">Message / Details</label>
-              <textarea id="connect-message" name="Message" class="form-textarea" placeholder="Tell us more..."
-                required></textarea>
+              <textarea id="connect-message" name="Message" class="form-textarea" placeholder="Tell us more..." aria-required="true" required></textarea>
             </div>
             <button type="submit" class="form-submit" id="connect-submit-btn">Send Message</button>
           </form>
