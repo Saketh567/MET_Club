@@ -1,6 +1,6 @@
 /* ============================================================
-   MET CLUB — Interactions
-   Clean, minimal — no gimmicks
+   MET CLUB - Interactions
+   Clean, minimal - no gimmicks
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -67,13 +67,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // ──── Form: Connect ────────────────────────────────
+  // ──── Forms ────────────────────────────────
   setupForm('connect-form', 'connect-submit-btn', 'connect-success', 'connect-email');
+  setupForm('story-form', 'story-submit-btn', 'story-success', 'story-email');
 
   function setupForm(formId, btnId, successId, emailId) {
     const form = document.getElementById(formId);
     const success = document.getElementById(successId);
     if (!form) return;
+
+    // Check if we just returned from a successful FormSubmit redirect
+    if (window.location.search.includes('submitted=true')) {
+        form.style.display = 'none';
+        if (success) success.classList.add('show');
+        
+        // Clean up the URL so it looks nice
+        const anchor = form.closest('section') ? form.closest('section').id : 'contact';
+        const cleanUrl = window.location.href.split('?')[0] + '#' + anchor;
+        window.history.replaceState(null, null, cleanUrl);
+        return; // Don't setup the submit listener since form is already gone
+    }
 
     form.addEventListener('submit', e => {
       let valid = true;
@@ -86,24 +99,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      const email = document.getElementById(emailId);
-      if (email?.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      const email = emailId ? document.getElementById(emailId) : null;
+      if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
         valid = false;
         email.style.borderColor = '#c44';
       }
 
       if (!valid) {
-        // Prevent submission if invalid
-        e.preventDefault();
+        e.preventDefault(); // Stop if invalid
       } else {
-        // Allow native HTML submission to proceed to FormSubmit.co
+        // Form is valid! Allow native submission.
         const btn = document.getElementById(btnId);
         btn.textContent = 'Redirecting...';
         btn.style.opacity = '0.6';
         
-        // Dynamically set action if config provides an email
         const targetEmail = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.contactEmail) ? SITE_CONFIG.contactEmail : "1873reddy1873@gmail.com";
         form.action = `https://formsubmit.co/${targetEmail}`;
+
+        // Create a dynamic _next field to bounce the user right back here with ?submitted=true
+        let nextInput = form.querySelector('input[name="_next"]');
+        if (!nextInput) {
+            nextInput = document.createElement('input');
+            nextInput.type = 'hidden';
+            nextInput.name = '_next';
+            form.appendChild(nextInput);
+        }
+        
+        // The URL to bounce back to
+        const anchor = form.closest('section') ? form.closest('section').id : 'contact';
+        const returnUrl = window.location.href.split('?')[0].split('#')[0] + "?submitted=true#" + anchor;
+        nextInput.value = returnUrl;
       }
     });
   }
@@ -143,6 +168,114 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 class="team-name">${member.name}</h3>
           <p class="team-role">${member.role}</p>
         </div>`;
+      });
+    }
+
+
+
+    // 1.5 INJECT TEAM SLIDER (team.html)
+    const sliderTrack = document.getElementById('team-slider-track');
+    if (sliderTrack && SITE_CONFIG.team && SITE_CONFIG.team.length > 0) {
+      // Create slide HTML
+      const createSlideHTML = (member) => `
+        <div class="team-slide" style="flex: 0 0 100%;">
+          <div class="team-slide-sidebar">
+            <img src="${member.image}" alt="${member.name}" loading="lazy" class="full-length-img" />
+          </div>
+          <div class="team-slide-main">
+            <div class="main-header">
+               <h3 class="main-name">${member.name.toUpperCase()}</h3>
+               <p class="main-role">${member.role.toUpperCase()}</p>
+            </div>
+            <p class="main-bio">${member.bio || "No biography available."}</p>
+            
+            <div class="tech-dashboard">
+              ${member.skills ? `
+              <div class="quick-stats-card">
+                 <h5>QUICK STATS</h5>
+                 <div class="stats-list">
+                    ${member.skills.map(s => `
+                      <div class="stat-item">
+                        <div class="stat-label"><span>${s.name || s}</span> <span>${s.level || 80}%</span></div>
+                        <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: ${s.level || 80}%"></div></div>
+                      </div>
+                    `).join('')}
+                 </div>
+              </div>
+              ` : ''}
+              
+              ${member.currentProject ? `
+              <div class="current-project-wrapper">
+                  <div class="current-project-card">
+                     <div class="project-badge">CURRENTLY WORKING ON</div>
+                     <p class="project-title">${typeof member.currentProject === 'string' ? member.currentProject : member.currentProject.title}</p>
+                     ${member.currentProject.desc ? `<p class="project-desc">${member.currentProject.desc}</p>` : ''}
+                  </div>
+                  <div class="action-buttons">
+                     <button class="action-btn">
+                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                       Message
+                     </button>
+                     <button class="action-btn">
+                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                       Network
+                     </button>
+                     <button class="action-btn">
+                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                       Follow
+                     </button>
+                  </div>
+              </div>
+              ` : ''}
+            </div>
+          </div>
+        </div>`;
+
+      // Populate it normally
+      SITE_CONFIG.team.forEach(member => {
+        sliderTrack.innerHTML += createSlideHTML(member);
+      });
+
+      // True Infinite Loop Logic
+      let isAnimating = false;
+      
+      const nextBtn = document.getElementById('slider-next');
+      const prevBtn = document.getElementById('slider-prev');
+
+      nextBtn?.addEventListener('click', () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        
+        sliderTrack.style.transition = 'transform 0.5s ease-in-out';
+        sliderTrack.style.transform = 'translateX(-100%)';
+        
+        setTimeout(() => {
+          sliderTrack.style.transition = 'none';
+          sliderTrack.appendChild(sliderTrack.firstElementChild);
+          sliderTrack.style.transform = 'translateX(0)';
+          isAnimating = false;
+        }, 500); // matches transition time
+      });
+
+      prevBtn?.addEventListener('click', () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        
+        // Move the last element to the front instantaneously
+        sliderTrack.style.transition = 'none';
+        sliderTrack.insertBefore(sliderTrack.lastElementChild, sliderTrack.firstElementChild);
+        sliderTrack.style.transform = 'translateX(-100%)';
+        
+        // Force reflow
+        void sliderTrack.offsetWidth;
+        
+        // Slide to 0
+        sliderTrack.style.transition = 'transform 0.5s ease-in-out';
+        sliderTrack.style.transform = 'translateX(0)';
+        
+        setTimeout(() => {
+          isAnimating = false;
+        }, 500);
       });
     }
 

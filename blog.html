@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Showcase - MET Club</title>
-  <meta name="description" content="Share your story and projects with the MET community.">
+  <title>Blog - MET Club</title>
+  <meta name="description" content="Stay tuned for updates.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://images.unsplash.com; media-src 'self' https://assets.mixkit.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-src 'self' https://player.vimeo.com;">
   <meta name="theme-color" content="#f5f1eb">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E◈%3C/text%3E%3C/svg%3E">
@@ -13,14 +13,7 @@
 </head>
 <body>
 
-  <!-- 
-    ════════════════════════════════════════════════════════════════
-    NAVBAR SECTION
-    Matches the index.html navbar for consistency, but links point
-    back to index.html (e.g., href="index.html#about") so users can
-    navigate across pages flawlessly.
-    ════════════════════════════════════════════════════════════════ 
-  -->
+  <!-- NAVBAR SECTION -->
   <nav class="nav" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-brand">MET</a>
@@ -29,7 +22,7 @@
           <a href="team.html" class="nav-link">Team</a>
           <a href="index.html#what-we-do" class="nav-link">Disciplines</a>
           <a href="showcase.html" class="nav-link">Projects</a>
-          <a href="index.html#events" class="nav-link">Events</a>
+          <a href="events.html" class="nav-link">Events</a>
           <a href="index.html#contact" class="nav-link">Contact</a>
           <a href="index.html#contact" class="nav-join-mobile">Join MET</a>
         </div>
@@ -41,14 +34,8 @@
     </div>
   </nav>
 
-  <!-- 
-    ════════════════════════════════════════════════════════════════
-    SHOWCASE HERO SECTION
-    Maintains the ocean theme video background for brand consistency.
-    This hero is slightly shorter (min-height: 55vh) than the home page hero.
-    ════════════════════════════════════════════════════════════════ 
-  -->
-  <section class="hero-ocean" id="hero" style="min-height: 55vh; padding-top: 15vh;">
+  <!-- HERO SECTION -->
+  <section class="hero-ocean" id="hero" style="min-height: 80vh; padding-top: 15vh;">
     <div class="hero-ocean-bg">
       <video autoplay loop muted playsinline class="hero-video-bg">
         <source src="oceanwave.mp4" type="video/mp4">
@@ -58,109 +45,27 @@
     
     <div class="container hero-ocean-content">
       <div class="hero-ocean-center reveal">
-        <h1 class="hero-ocean-title" style="font-size: clamp(3rem, 6vw, 5rem);">Showcase</h1>
-        <p class="hero-ocean-subtitle">Share your journey. Inspire the future.</p>
-        <a href="#submit" class="hero-ocean-btn">Share Your Story</a>
+        <h1 class="hero-ocean-title" style="font-size: clamp(3rem, 6vw, 5rem);">Blog</h1>
+        <p class="hero-ocean-subtitle">Something is cooking. Stay tuned!</p>
+        <p style="color: var(--white); font-size: 1.25rem; max-width: 600px; margin: 1rem auto; opacity: 0.9;">This page is currently under construction. Please visit again later!</p>
+        <a href="index.html" class="hero-ocean-btn" style="margin-top: 2rem;">Return Home</a>
       </div>
     </div>
     
     <!-- Wave Transition to next section -->
     <div class="hero-wave" style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 80px;">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.62,19.34,103.74,40.17,157.81,51.81,211.89,63.44,266.37,66.15,321.39,56.44Z" fill="#f5f1eb"></path>
-      </svg>
-    </div>
-  </section>
-
-  <!-- 
-    ════════════════════════════════════════════════════════════════
-    COMMUNITY PROJECTS GALLERY (DYNAMIC CONTENT)
-    This grid showcases member projects. It is completely dynamic!
-    script.js reads the 'projects' array from config.js and injects
-    the project cards into the <div id="dynamic-projects"> container.
-    To feature a new project, simply add it to config.js.
-    ════════════════════════════════════════════════════════════════ 
-  -->
-  <section class="about" id="projects" style="padding-top: 5rem;">
-    <div class="container">
-      <h2 class="about-title" style="text-align: center; margin-bottom: 4rem;">Community <em>Projects</em></h2>
-      <div class="team-grid" id="dynamic-projects">
-        <!-- Injected via config.js -->
-      </div>
-    </div>
-    
-    <!-- Wave Transition to next section -->
-    <div class="about-wave" style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 80px;">
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.62,19.34,103.74,40.17,157.81,51.81,211.89,63.44,266.37,66.15,321.39,56.44Z" fill="#ffffff"></path>
       </svg>
     </div>
   </section>
 
-  <!-- 
-    ════════════════════════════════════════════════════════════════
-    SHARE YOUR STORY FORM
-    A custom form designed to collect user stories and project submissions.
-    JavaScript handles the submit event to hide the form and display a 
-    success message smoothly without a page refresh.
-    ════════════════════════════════════════════════════════════════ 
-  -->
-  <section class="connect" id="submit" style="background: var(--white); padding: 8rem 0;">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info reveal-left">
-          <h2 class="contact-title" style="margin-bottom: 1.5rem;">Share Your <em>Story</em></h2>
-          <p class="contact-desc">Have you built something amazing? Did a specific project or concept change the way you see the world? We want to hear from you.</p>
-          <p class="contact-desc">Share your MET journey, what you've learned, and inspire the next generation of builders.</p>
-        </div>
-        <div class="contact-form-wrapper reveal-right">
-          <form class="contact-form" id="story-form" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="story-name" class="form-label">Your Name</label>
-                <input type="text" id="story-name" name="name" class="form-input" placeholder="Jane Doe" required>
-              </div>
-              <div class="form-group">
-                <label for="story-email" class="form-label">Email Address</label>
-                <input type="email" id="story-email" name="email" class="form-input" placeholder="jane@example.com" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="story-project" class="form-label">Project Title</label>
-                <input type="text" id="story-project" name="project" class="form-input" placeholder="What did you build?" required>
-              </div>
-              <div class="form-group">
-                <label for="story-link" class="form-label">Project Link</label>
-                <input type="url" id="story-link" name="link" class="form-input" placeholder="https://github.com/..." required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="story-text" class="form-label">Your Story</label>
-              <textarea id="story-text" name="story" class="form-textarea" placeholder="Tell us about your journey, challenges, and what you learned along the way..." required></textarea>
-            </div>
-            <button type="submit" class="form-submit" id="story-submit-btn">Submit Story</button>
-          </form>
-          <div class="form-success" id="story-success">
-            <div class="form-success-icon">✅</div>
-            <h3>Story submitted!</h3>
-            <p>Thank you for sharing your journey with the community. We'll review and feature it soon.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Wave Transition to next section -->
-    <div class="connect-wave" style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 80px;">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.62,19.34,103.74,40.17,157.81,51.81,211.89,63.44,266.37,66.15,321.39,56.44Z" fill="#f5f1eb"></path>
-      </svg>
-    </div>
+  <!-- EMPTY SECTION -->
+  <section style="background: var(--white); padding: 5rem 0; min-height: 20vh; display: flex; align-items: center; justify-content: center;">
+      <p style="color: var(--gray); text-align: center;">More content coming soon.</p>
   </section>
 
-  <!-- ════════════════════════════════
-       FOOTER
-       ════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-ocean-bg">
       <video autoplay loop muted playsinline class="footer-video-bg">
@@ -211,6 +116,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=13"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
