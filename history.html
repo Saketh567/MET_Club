@@ -3,147 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our History - MET Club</title>
-  <meta name="description" content="The legacy and history of the MET Club.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://images.unsplash.com; media-src 'self' https://assets.mixkit.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-src 'self' https://player.vimeo.com;">
+  <title>Our Legacy - MET Club</title>
+  <meta name="description" content="Discover the history and legacy of MET Club. Where it started, the milestones we've crossed, and the people who made it happen. Coming soon.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://images.unsplash.com; media-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
   <meta name="theme-color" content="#f5f1eb">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E◈%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="index.css">
-  <script src="config.js?v=2"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js?v=15"></script>
 </head>
 <body>
 
-  <!-- NAVBAR SECTION -->
-  <nav class="nav" id="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-brand">MET</a>
-      <div class="nav-right">
-        <div class="nav-links" id="nav-links">
-          <a href="team.html" class="nav-link">Team</a>
-          <a href="index.html#what-we-do" class="nav-link">Disciplines</a>
-          <a href="showcase.html" class="nav-link">Projects</a>
-          <a href="events.html" class="nav-link">Events</a>
-          <a href="index.html#contact" class="nav-link">Contact</a>
-          <a href="index.html#contact" class="nav-join-mobile">Join MET</a>
-        </div>
-        <a href="index.html#contact" class="nav-join">JOIN MET</a>
-        <div class="nav-hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <!-- Navbar injected by script.js from components/navbar.html -->
+  <div id="site-navbar"></div>
 
   <!-- HERO SECTION -->
-  <section class="hero-ocean" id="hero" style="min-height: 40vh; padding-top: 15vh;">
+  <section class="hero-ocean" id="hero" style="min-height: 80vh; padding-top: 15vh;">
     <div class="hero-ocean-bg">
       <video autoplay loop muted playsinline class="hero-video-bg">
-        <source src="oceanwave.mp4" type="video/mp4">
+        <source src="assets/videos/oceanwave.mp4" type="video/mp4">
       </video>
       <div class="hero-ocean-overlay"></div>
     </div>
-    
+
     <div class="container hero-ocean-content">
       <div class="hero-ocean-center reveal">
-        <h1 class="hero-ocean-title" style="font-size: clamp(3rem, 6vw, 5rem);">Our Legacy</h1>
-        <p class="hero-ocean-subtitle">Honoring the teams that built our foundation.</p>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">/ OUR LEGACY</p>
+        <h1 class="hero-ocean-title" style="font-size: clamp(3rem, 7vw, 6rem);">Where We<br><em style="font-style: italic; color: var(--gold);">Came From</em></h1>
+        <p class="hero-ocean-subtitle" style="max-width: 560px;">Every great club has a story. Ours is still being written, and soon, you'll be able to read it all here.</p>
+        <a href="index.html#contact" class="hero-ocean-btn" style="margin-top: 2rem;">Be Part of the Story</a>
       </div>
     </div>
-    
+
     <!-- Wave Transition -->
     <div class="hero-wave" style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 80px;">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.62,19.34,103.74,40.17,157.81,51.81,211.89,63.44,266.37,66.15,321.39,56.44Z" fill="#f5f1eb"></path>
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.62,19.34,103.74,40.17,157.81,51.81,211.89,63.44,266.37,66.15,321.39,56.44Z" fill="#f5f1eb"></path>
       </svg>
     </div>
   </section>
 
-  <!-- HISTORY LIST SECTION -->
-  <section class="history-section" style="padding-top: 6rem; padding-bottom: 8rem; background: var(--cream);">
-    <div class="container" style="max-width: 900px;">
-      
-      <div class="history-list" style="display: flex; flex-direction: column; gap: 8rem;">
-        
-        <!-- YEAR ENTRY 1 -->
-        <div class="history-item reveal">
-          <h2 style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--black); margin-bottom: 1.5rem; border-bottom: 3px solid var(--green); padding-bottom: 0.5rem; letter-spacing: -0.02em;">
-            The Founding Year <span style="font-family: var(--font-mono); font-size: 1.5rem; color: var(--text-muted); vertical-align: middle; margin-left: 1rem;">2025 / 2026</span>
-          </h2>
-          <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="2025/2026 Team" style="width: 100%; border-radius: 16px; margin-bottom: 2rem; object-fit: cover; max-height: 500px; border: 4px solid var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-          <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text);">The cohort that set the standard. This pioneering team established the core values of the MET Club, bridged the gap between mathematics and technology, and successfully turned a small idea into a campus-wide movement.</p>
+  <!-- WHAT'S COMING SECTION -->
+  <section style="background: var(--cream); padding: 7rem 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 5rem;">
+        <p class="section-label reveal">/ COMING SOON</p>
+        <h2 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 400; color: var(--black); line-height: 1.2; margin: 1rem 0;" class="reveal">
+          The Legacy page is<br><em style="color: var(--gold);">under construction.</em>
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-top: 1.5rem;" class="reveal">
+          We're gathering stories, photos, and milestones from everyone who's been part of MET Club since the beginning. This page will be a living archive of everything we've built together.
+        </p>
+      </div>
+
+      <!-- Preview cards: what the legacy page will include -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+
+        <div class="reveal" style="background: var(--white); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">📖</div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 400; color: var(--black); margin-bottom: 0.75rem;">The Founding Story</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;">How MET Club started: the original vision, the founding members, and the spark that brought it all together.</p>
         </div>
 
-        <!-- YEAR ENTRY 2 -->
-        <div class="history-item reveal">
-          <h2 style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--black); margin-bottom: 1.5rem; border-bottom: 3px solid var(--green); padding-bottom: 0.5rem; letter-spacing: -0.02em;">
-            The Expansion Era <span style="font-family: var(--font-mono); font-size: 1.5rem; color: var(--text-muted); vertical-align: middle; margin-left: 1rem;">2026 / 2027</span>
-          </h2>
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="2026/2027 Team" style="width: 100%; border-radius: 16px; margin-bottom: 2rem; object-fit: cover; max-height: 500px; border: 4px solid var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-          <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text);">The second year of the MET Club. Building upon a solid foundation, this team is taking our vision to the next level with more ambitious projects, larger cross-disciplinary hackathons, and a rapidly expanding community.</p>
+        <div class="reveal" style="background: var(--white); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 400; color: var(--black); margin-bottom: 0.75rem;">Milestones & Achievements</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;">Competitions won, projects shipped, ideas turned into reality. A timeline of every proud moment since day one.</p>
         </div>
 
-        <!-- YEAR ENTRY 3 (Future) -->
-        <div class="history-item reveal">
-          <h2 style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--black); margin-bottom: 1.5rem; border-bottom: 3px solid var(--green); padding-bottom: 0.5rem; letter-spacing: -0.02em;">
-            The Next Chapter <span style="font-family: var(--font-mono); font-size: 1.5rem; color: var(--text-muted); vertical-align: middle; margin-left: 1rem;">2027 &amp; Beyond ?</span>
-          </h2>
-          <div style="width: 100%; border-radius: 16px; margin-bottom: 2rem; background: var(--white); border: 4px dashed var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6rem 2rem; text-align: center;">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1.5rem; opacity: 0.8;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-            <h3 style="font-family: var(--font-sans); font-size: 2rem; color: var(--black); margin-bottom: 1rem;">Your Photo Here?</h3>
-            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text); max-width: 600px; margin-bottom: 2.5rem;">The legacy of the MET Club is continuously being written. You could be part of this history, leading the next wave of innovation and taking our community even further into the future.</p>
-            <a href="index.html#contact" style="display: inline-block; padding: 1rem 3rem; background: var(--green); color: var(--white); text-decoration: none; font-family: var(--font-sans); font-weight: 700; border-radius: var(--r-pill); transition: var(--t-fast); font-size: 1.1rem; box-shadow: 0 10px 20px rgba(27, 61, 47, 0.2);">Join The Legacy</a>
-          </div>
+        <div class="reveal" style="background: var(--white); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">🎓</div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 400; color: var(--black); margin-bottom: 0.75rem;">Alumni & Past Members</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;">MET has always been bigger than any single year. Meet the people who shaped the club before you joined.</p>
         </div>
 
+        <div class="reveal" style="background: var(--white); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">📸</div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 400; color: var(--black); margin-bottom: 0.75rem;">Photo Archive</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;">Photos from workshops, late-night hackathons, and events. The moments that made MET, MET.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: 5rem;" class="reveal">
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Have photos or stories from past events? Help us build the archive.</p>
+        <a href="index.html#contact" style="display: inline-block; padding: 1rem 3rem; background: var(--green); color: var(--white); border-radius: var(--r-pill); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none;">Share Your Story</a>
+        <a href="index.html" style="display: inline-block; margin-left: 1rem; padding: 1rem 3rem; border: 1px solid var(--border); color: var(--black); border-radius: var(--r-pill); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none;">Return Home</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-ocean-bg">
-      <video autoplay loop muted playsinline class="footer-video-bg">
-        <source src="oceanwave.mp4" type="video/mp4">
-      </video>
-      <div class="footer-ocean-overlay"></div>
-    </div>
-    <div class="container footer-content">
-      <div class="footer-top">
-        <div>
-          <p class="footer-brand-name">MET - Maths, Engineering and Technology Club</p>
-          <p class="footer-brand-desc">Where theory meets creation. Building tomorrow's solutions in today's workshops.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navigate</h4>
-          <a href="index.html#hero">Home</a>
-          <a href="index.html#what-we-do">What We Do</a>
-          <a href="team.html">Team</a>
-          <a href="events.html">Events</a>
-          <a href="showcase.html">Projects</a>
-          <a href="index.html#contact">Join</a>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <a href="blog.html">Blog</a>
-          <a href="history.html">History</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="newsletter.html">Newsletter</a>
-          <a href="faq.html">FAQ</a>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <a href="#">Discord</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">GitHub</a>
-          <a href="#">Instagram</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> MET Club. All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer injected by script.js from components/footer.html -->
+  <div id="site-footer"></div>
 
-  <script src="script.js?v=11"></script>
+  <script src="js/script.js?v=14"></script>
 </body>
 </html>

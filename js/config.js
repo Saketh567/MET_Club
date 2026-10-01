@@ -100,63 +100,11 @@ const SITE_CONFIG = {
   // ──────────────────────────────────────────────
   // EVENTS CALENDAR (Index Page)
   // ──────────────────────────────────────────────
-  events: [
-    {
-      date: "2026-10-14",
-      title: "Robotics Workshop - Build a Line-Following Robot",
-      meta: "6:00-8:00 PM · Engineering Lab",
-      details: "Join us for a hands-on workshop where we will build a line-following robot from scratch. No prior experience is required, and all materials will be provided. We'll cover basic electronics, motor control, and simple programming."
-    },
-    {
-      date: "2026-10-22",
-      title: "Calculus Study Circle - Fourier Transforms & Applications",
-      meta: "4:30-6:00 PM · Math Commons Rm 112",
-      details: "A collaborative study session focusing on Fourier transforms. We'll explore the mathematical theory behind them and discuss real-world applications in signal processing and engineering."
-    },
-    {
-      date: "2026-11-03",
-      title: "3D Printing for Engineers - Rapid Prototyping Session",
-      meta: "10:00 AM-12:30 PM · Makerspace Studio",
-      details: "Learn the fundamentals of 3D printing and rapid prototyping. This session will walk you through CAD design basics, slicing software, and best practices for printing functional parts for your engineering projects."
-    },
-    {
-      date: "2026-11-15",
-      title: "AI Workshop - Train Your First Neural Network",
-      meta: "2:00-5:00 PM · CS Lab 204",
-      details: "Dive into the world of Artificial Intelligence! We will guide you through setting up a Python environment and training your very first neural network using PyTorch to recognize handwritten digits."
-    },
-    {
-      date: "2026-12-01",
-      title: "MET Hackathon 2026 - 48-Hour Innovation Sprint",
-      meta: "All day · Engineering Hall",
-      details: "The biggest event of the year! Join us for a 48-hour innovation sprint where teams will compete to build the best tech solutions. Prizes, free food, and industry networking opportunities await!"
-    }
-  ],
+  // Events will be listed here when confirmed. Leave empty to show the "stay tuned" placeholder.
+  events: [],
 
   // ──────────────────────────────────────────────
   // COMMUNITY PROJECTS (Showcase Page)
   // ──────────────────────────────────────────────
-  projects: [
-    {
-      title: "AI-Powered Robotics",
-      author: "Sarah Jenkins",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "An autonomous robot capable of navigating complex terrains using machine learning algorithms. Built entirely from scratch during the winter workshop.",
-      link: "#"
-    },
-    {
-      title: "Quantum Algorithm Sim",
-      author: "Marcus Chen",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "A lightweight, web-based simulator designed to make core quantum computing concepts visually accessible to beginners and enthusiasts.",
-      link: "#"
-    },
-    {
-      title: "Eco-Tracker App",
-      author: "Team GreenTech",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "A mobile application that tracks and gamifies personal carbon footprints for college students. Over 500 active users in the first month.",
-      link: "#"
-    }
-  ]
+  projects: []
 };

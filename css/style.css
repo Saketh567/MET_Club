@@ -3,7 +3,7 @@
    Cream · Forest Green · Big Serif · Lots of Air
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ── Tokens ────────────────────────────────────────────────── */
 /* 
@@ -462,7 +462,7 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
 .discipline-number {
   font-family: var(--font-serif);
   font-size: 0.9rem;
-  color: var(--green);
+  color: #62c58a; /* Brightened green for dark backgrounds */
   margin-bottom: 0.5rem;
 }
 
@@ -514,38 +514,8 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
   text-transform: uppercase;
   padding: 0.2rem 0.6rem;
   border-radius: var(--r-pill);
-  border: 1px solid rgba(42, 92, 69, 0.5);
-  color: var(--green-light);
-}
-
-/* Stat strip */
-.stat-strip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  padding: 3.5rem 0;
-  margin-top: 3.5rem;
-  border-top: 1px solid var(--border);
-}
-
-.stat-strip-item {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  text-align: center;
-}
-
-.stat-strip-value {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--green);
-  line-height: 1;
-}
-
-.stat-strip-label {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  border: 1px solid rgba(98, 197, 138, 0.4);
+  color: #62c58a; /* Brightened green for dark backgrounds */
 }
 
 .stat-strip-dot {
@@ -1058,15 +1028,8 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  .hero-image { width: 50%; top: 2rem; }
-  .hero-title { max-width: 55%; }
-  .bento { grid-template-columns: 1fr; }
-  .bento-card--wide { grid-row: span 1; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
   .disciplines-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { gap: 3rem; }
-  .join-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .connect-grid { grid-template-columns: 1fr; gap: 3rem; }
   .footer-top { grid-template-columns: 1fr 1fr; }
 }
@@ -1128,20 +1091,6 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
   }
   
   .nav-hamburger { display: flex; z-index: 100; }
-
-  .hero { padding: 8rem 0 4rem; }
-  .hero-image {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    top: 0;
-    margin-top: 2rem;
-  }
-  .hero-title { max-width: 100%; }
-
-  .bento { grid-template-columns: 1fr; }
-  .stat-strip { flex-direction: column; gap: 1.5rem; }
-  .stat-strip-dot { display: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
   .about-image { margin-top: 1rem; }
