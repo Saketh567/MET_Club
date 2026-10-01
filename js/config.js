@@ -32,22 +32,10 @@ const SITE_CONFIG = {
       github: "#"
     },
     {
-      name: "Saketh Reddy Kanthala",
-      role: "Tech Lead",
-      image: "assets/images/saketh.jpeg",
-      bio: "Saketh is the technical backbone of our projects. He specializes in bridging complex algorithms with robust software architecture, constantly pushing the boundaries of what our club can build.",
-      memberId: "#TC8494",
-      joinYear: "2022",
-      skills: [{name: "Python", level: 88}, {name: "JavaScript", level: 92}, {name: "AWS", level: 85}, {name: "Docker", level: 75}],
-      currentProject: { title: "Project Phoenix", desc: "AI-powered Analytics Platform" },
-      linkedin: "#",
-      github: "#"
-    },
-    {
       name: "Shubham Verma",
-      role: "Events Coordinator",
+      role: "Marketing Lead",
       image: "assets/images/shubham.jpeg",
-      bio: "Shubham orchestrates our hackathons and workshops. His dedication ensures that every event is an unforgettable learning experience for all members.",
+      bio: "Shubham orchestrates our outreach and marketing efforts. His dedication ensures that every event reaches our audience and is an unforgettable experience for all members.",
       memberId: "#TC8495",
       joinYear: "2023",
       skills: [{name: "Event Planning", level: 92}, {name: "Community", level: 90}, {name: "Marketing", level: 85}, {name: "Outreach", level: 80}],
@@ -56,8 +44,20 @@ const SITE_CONFIG = {
       github: "#"
     },
     {
+      name: "Saketh Reddy Kanthala",
+      role: "Treasurer",
+      image: "assets/images/saketh.jpeg",
+      bio: "Saketh manages the club's finances and resources. He specializes in bridging complex budgets with robust planning, constantly pushing the boundaries of what our club can achieve.",
+      memberId: "#TC8494",
+      joinYear: "2022",
+      skills: [{name: "Finance", level: 92}, {name: "Planning", level: 88}, {name: "Management", level: 85}, {name: "Strategy", level: 80}],
+      currentProject: { title: "Club Budget", desc: "Resource Allocation" },
+      linkedin: "#",
+      github: "#"
+    },
+    {
       name: "Open Position",
-      role: "Hardware Lead",
+      role: "Event Co-ordinator",
       image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23ece7df'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='120' fill='%231b3d2f' text-anchor='middle' dominant-baseline='central'>?</text></svg>",
       memberId: "#TC0000",
       joinYear: "2024",
@@ -67,7 +67,7 @@ const SITE_CONFIG = {
     },
     {
       name: "Open Position",
-      role: "Operations Director",
+      role: "Event Manager",
       image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23ece7df'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='120' fill='%231b3d2f' text-anchor='middle' dominant-baseline='central'>?</text></svg>",
       memberId: "#TC0000",
       joinYear: "2024",
@@ -77,18 +77,11 @@ const SITE_CONFIG = {
     },
     {
       name: "Open Position",
-      role: "Software Engineer",
+      role: "Volunteer",
       image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23ece7df'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='120' fill='%231b3d2f' text-anchor='middle' dominant-baseline='central'>?</text></svg>",
       memberId: "#TC0000",
       joinYear: "2024",
       currentProject: { title: "Hiring Now", desc: "Apply to join the team" },
-      linkedin: "#",
-      github: "#"
-    },
-    {
-      name: "Open Position",
-      role: "Marketing Lead",
-      image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23ece7df'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='120' fill='%231b3d2f' text-anchor='middle' dominant-baseline='central'>?</text></svg>",
       linkedin: "#",
       github: "#"
     }
