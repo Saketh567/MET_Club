@@ -11,11 +11,11 @@ const SITE_CONFIG = {
       role: "President",
       image: "assets/images/ratna.jpeg",
       imagePosition: "15% center",
-      bio: "Ratna leads the vision and strategy for MET Club. With a passion for interdisciplinary engineering, she focuses on building a community where theoretical math meets practical technology.",
+      bio: "Ratna leads the vision and strategy for MET Club. With a passion for interdisciplinary engineering, he focuses on building a community where theoretical math meets practical technology.",
       memberId: "#TC8492",
       joinYear: "2023",
       skills: [{name: "Leadership", level: 90}, {name: "Systems Design", level: 85}, {name: "Strategy", level: 95}, {name: "Management", level: 80}],
-      currentProject: { title: "Strategic Growth", desc: "AI-powered Analytics Platform" },
+      currentProject: { title: "Club Strategy", desc: "Planning events and meeting with clients" },
       linkedin: "#",
       github: "#"
     },
@@ -27,7 +27,7 @@ const SITE_CONFIG = {
       memberId: "#TC8493",
       joinYear: "2023",
       skills: [{name: "Operations", level: 95}, {name: "Product Mgt", level: 88}, {name: "Logistics", level: 85}, {name: "Design", level: 75}],
-      currentProject: { title: "Fall Hackathon", desc: "Scaling club operations" },
+      currentProject: { title: "Team Expansion", desc: "Hiring and selecting new candidates" },
       linkedin: "#",
       github: "#"
     },
@@ -39,7 +39,7 @@ const SITE_CONFIG = {
       memberId: "#TC8495",
       joinYear: "2023",
       skills: [{name: "Event Planning", level: 92}, {name: "Community", level: 90}, {name: "Marketing", level: 85}, {name: "Outreach", level: 80}],
-      currentProject: { title: "MET Tech Symposium", desc: "Annual technical showcase" },
+      currentProject: { title: "Club Promotion", desc: "Designing posters and marketing campaigns" },
       linkedin: "#",
       github: "#"
     },
@@ -51,7 +51,7 @@ const SITE_CONFIG = {
       memberId: "#TC8494",
       joinYear: "2022",
       skills: [{name: "Finance", level: 92}, {name: "Planning", level: 88}, {name: "Management", level: 85}, {name: "Strategy", level: 80}],
-      currentProject: { title: "Club Budget", desc: "Resource Allocation" },
+      currentProject: { title: "Financial Planning", desc: "Securing funding and allocating resources" },
       linkedin: "#",
       github: "#"
     },
