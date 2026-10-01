@@ -22,12 +22,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const footerPlaceholder = document.getElementById('site-footer');
     if (footerPlaceholder) footerPlaceholder.outerHTML = footerHTML;
+    
+    // Populate dynamic footer links
+    document.querySelectorAll('.dynamic-discord-link').forEach(el => {
+      if (SITE_CONFIG.discordLink && SITE_CONFIG.discordLink !== "#") el.href = SITE_CONFIG.discordLink.startsWith('http') ? SITE_CONFIG.discordLink : `https://${SITE_CONFIG.discordLink}`;
+    });
+    document.querySelectorAll('.dynamic-instagram-link').forEach(el => {
+      if (SITE_CONFIG.instagramLink && SITE_CONFIG.instagramLink !== "#") el.href = SITE_CONFIG.instagramLink.startsWith('http') ? SITE_CONFIG.instagramLink : `https://${SITE_CONFIG.instagramLink}`;
+    });
+    document.querySelectorAll('.dynamic-linkedin-link').forEach(el => {
+      if (SITE_CONFIG.linkedinLink && SITE_CONFIG.linkedinLink !== "#") el.href = SITE_CONFIG.linkedinLink.startsWith('http') ? SITE_CONFIG.linkedinLink : `https://${SITE_CONFIG.linkedinLink}`;
+    });
+    document.querySelectorAll('.dynamic-github-link').forEach(el => {
+      if (SITE_CONFIG.githubLink && SITE_CONFIG.githubLink !== "#") el.href = SITE_CONFIG.githubLink.startsWith('http') ? SITE_CONFIG.githubLink : `https://${SITE_CONFIG.githubLink}`;
+    });
   } catch (e) {
     // Components failed to load (e.g. opened as a local file:// without a server).
     // The page will still work - nav/footer just won't appear. Use a local server.
     console.warn('MET: Could not load shared components. Run via a local web server.', e);
   }
-
 
   // ──── Navbar scroll ────────────────────────────────
   const navbar = document.getElementById('navbar');
