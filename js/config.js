@@ -61,7 +61,6 @@ const SITE_CONFIG = {
       image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23ece7df'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='120' fill='%231b3d2f' text-anchor='middle' dominant-baseline='central'>?</text></svg>",
       memberId: "#TC0000",
       joinYear: "2024",
-      skills: [{name: "Hardware", level: 0}, {name: "Circuitry", level: 0}, {name: "Embedded", level: 0}],
       currentProject: { title: "Hiring Now", desc: "Apply to join the team" },
       linkedin: "#",
       github: "#"
@@ -72,7 +71,6 @@ const SITE_CONFIG = {
       image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23ece7df'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='120' fill='%231b3d2f' text-anchor='middle' dominant-baseline='central'>?</text></svg>",
       memberId: "#TC0000",
       joinYear: "2024",
-      skills: [{name: "Logistics", level: 0}, {name: "Management", level: 0}],
       currentProject: { title: "Hiring Now", desc: "Apply to join the team" },
       linkedin: "#",
       github: "#"
@@ -83,7 +81,6 @@ const SITE_CONFIG = {
       image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23ece7df'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='120' fill='%231b3d2f' text-anchor='middle' dominant-baseline='central'>?</text></svg>",
       memberId: "#TC0000",
       joinYear: "2024",
-      skills: [{name: "Fullstack", level: 0}, {name: "Database", level: 0}],
       currentProject: { title: "Hiring Now", desc: "Apply to join the team" },
       linkedin: "#",
       github: "#"
