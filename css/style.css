@@ -1210,9 +1210,13 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.4rem;
   background: var(--white); border: 1px solid var(--border); border-radius: 8px; 
   padding: 0.6rem; font-size: 0.75rem; font-weight: 600; font-family: var(--font-sans); color: var(--black); cursor: pointer; flex: 1; transition: var(--t-fast);
+  text-decoration: none; /* for <a> tags */
+  -webkit-appearance: none; appearance: none; /* strip native <button> styles */
 }
 .action-btn:hover { background: var(--green); color: white; border-color: var(--green); }
 .action-btn:hover svg { stroke: white; }
+.action-btn:hover svg[fill="currentColor"] { fill: white; stroke: none; }
+
 
 
 
