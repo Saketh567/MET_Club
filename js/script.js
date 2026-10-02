@@ -241,44 +241,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
             <p class="main-bio">${member.bio || "No biography available."}</p>
 
-            <div class="tech-dashboard">
-              ${member.skills ? `
-              <div class="quick-stats-card">
-                 <h5>QUICK STATS</h5>
-                 <div class="stats-list">
-                    ${member.skills.map(s => `
-                      <div class="stat-item">
-                        <div class="stat-label"><span>${s.name || s}</span> <span>${s.level || 80}%</span></div>
-                        <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: ${s.level || 80}%"></div></div>
-                      </div>
-                    `).join('')}
-                 </div>
-              </div>
-              ` : ''}
-
-              ${member.currentProject ? `
-              <div class="current-project-wrapper">
-                  <div class="current-project-card">
-                     <div class="project-badge">CURRENTLY WORKING ON</div>
-                     <p class="project-title">${typeof member.currentProject === 'string' ? member.currentProject : member.currentProject.title}</p>
-                     ${member.currentProject.desc ? `<p class="project-desc">${member.currentProject.desc}</p>` : ''}
-                  </div>
-                  <div class="action-buttons">
-                     <a href="mailto:${member.email || ''}" class="action-btn" style="text-decoration: none; color: inherit;">
-                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                       Message
-                     </a>
-                     <a href="${member.linkedin}" target="_blank" class="action-btn" style="text-decoration: none; color: inherit;">
-                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                       Network
-                     </a>
-                     <a href="${member.github}" target="_blank" class="action-btn" style="text-decoration: none; color: inherit;">
-                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
-                       Follow
-                     </a>
-                  </div>
-              </div>
-              ` : ''}
+            <div class="action-buttons" style="margin-top: auto; padding-top: 1rem;">
+               <a href="mailto:${member.email || ''}" class="action-btn">
+                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                 Message
+               </a>
+               <a href="${member.linkedin}" target="_blank" class="action-btn">
+                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                 Network
+               </a>
+               <a href="${member.github}" target="_blank" class="action-btn">
+                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                 Follow
+               </a>
             </div>
           </div>
         </div>`;
