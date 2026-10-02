@@ -63,6 +63,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--green) var(--cream);
+  overflow-x: hidden;
 }
 html::-webkit-scrollbar { width: 6px; }
 html::-webkit-scrollbar-track { background: var(--cream); }
@@ -1266,3 +1267,9 @@ button, input, textarea, select { font-family: inherit; outline: none; border: n
   .prev-btn { left: -0.5rem; }
   .next-btn { right: -0.5rem; }
 }
+ 
+ / *   H i d e   i O S   P l a y   B u t t o n   O v e r l a y   o n   B a c k g r o u n d   V i d e o s   * /  
+ v i d e o   {   p o i n t e r - e v e n t s :   n o n e ;   }  
+ v i d e o : : - w e b k i t - m e d i a - c o n t r o l s   {   d i s p l a y :   n o n e   ! i m p o r t a n t ;   }  
+ v i d e o : : - w e b k i t - m e d i a - c o n t r o l s - s t a r t - p l a y b a c k - b u t t o n   {   d i s p l a y :   n o n e   ! i m p o r t a n t ;   - w e b k i t - a p p e a r a n c e :   n o n e ;   }  
+ 
