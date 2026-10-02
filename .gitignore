@@ -1,6 +1,8 @@
 # Ignore unrelated agent files and directories
+TOOLS/
 .gstack/
 skills/
 CLAUDE.md
 design.md
 ponytail.md
+LESSONS_LEARNED.md
